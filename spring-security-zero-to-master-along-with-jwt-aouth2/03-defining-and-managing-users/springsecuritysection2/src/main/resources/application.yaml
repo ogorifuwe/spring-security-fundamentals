@@ -6,8 +6,8 @@ spring:
   datasource:
     driver-class: "org.postgresql.Driver"
     url: "jdbc:postgresql://localhost:5432/oi"
-    username: "oi"
-    password: "admin"
+    username: "root"
+    password: ""
     initialization-mode: "always"
     initialize: true
   jpa:
