@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: "Eazy-Bank-Backend-API"
+#  config:
+#    import: "optional:configserver:http://localhost:7777"
+  datasource:
+    driver-class: "org.postgresql.Driver"
+    url: "jdbc:postgresql://localhost:5432/oi"
+    username: "oi"
+    password: "admin"
+    initialization-mode: "always"
+    initialize: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        default-schema: "eazybank"
+        format-sql: true
+        dialect: "org.hibernate.dialect.PostgreSQLDialect"
