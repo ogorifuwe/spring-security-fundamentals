@@ -12,15 +12,15 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
 @Configuration
-public class MySecurityConfig {
+public class FirstAppSecurityConfig {
 
-  @Bean
-  UserDetailsService userDetailsService() {
-    InMemoryUserDetailsManager userDetailsService = new InMemoryUserDetailsManager();
-    UserDetails user = User.withUsername("tom").password(passwordEncoder().encode("cruise")).authorities("read").build();
-    userDetailsService.createUser(user);
-    return userDetailsService;
-  }
+//  @Bean
+//  UserDetailsService userDetailsService() {
+//    InMemoryUserDetailsManager userDetailsService = new InMemoryUserDetailsManager();
+//    UserDetails user = User.withUsername("tom").password(passwordEncoder().encode("cruise")).authorities("read").build();
+//    userDetailsService.createUser(user);
+//    return userDetailsService;
+//  }
 
   @Bean
   BCryptPasswordEncoder passwordEncoder() {
