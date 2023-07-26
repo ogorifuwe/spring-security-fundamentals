@@ -17,7 +17,7 @@ public class MySecurityConfig {
   @Bean
   UserDetailsService userDetailsService() {
     InMemoryUserDetailsManager userDetailsService = new InMemoryUserDetailsManager();
-    UserDetails user = User.withUsername("tom").password(passwordEncoder().encode("cruise")).authorities("read").build();7
+    UserDetails user = User.withUsername("tom").password(passwordEncoder().encode("cruise")).authorities("read").build();
     userDetailsService.createUser(user);
     return userDetailsService;
   }
