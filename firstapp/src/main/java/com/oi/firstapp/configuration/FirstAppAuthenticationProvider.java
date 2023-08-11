@@ -19,7 +19,7 @@ public class FirstAppAuthenticationProvider implements AuthenticationProvider {
     if ("tom".equals(userName) && "cruise".equals(password)) {
       return new UsernamePasswordAuthenticationToken(userName, password, Arrays.asList());
     } else {
-        throw new BadCredentialsException("Invalid Udername or Password");
+        throw new BadCredentialsException("Invalid Username or Password");
     }
   }
 

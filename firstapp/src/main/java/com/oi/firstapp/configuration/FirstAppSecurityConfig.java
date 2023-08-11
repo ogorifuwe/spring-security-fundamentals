@@ -29,8 +29,9 @@ public class FirstAppSecurityConfig {
 
   @Bean
   SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
-    httpSecurity.formLogin();
-    httpSecurity.authorizeHttpRequests().anyRequest().authenticated();
+    httpSecurity.httpBasic();
+    httpSecurity.authorizeHttpRequests().requestMatchers("/hello").authenticated();
+    httpSecurity.addFilterBefore(new FirstAppSecurityFilter(), BasicAuthenticationFilter.class);
     return httpSecurity.build();
   }
 
